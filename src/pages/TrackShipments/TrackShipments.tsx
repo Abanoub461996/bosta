@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '../../components/Navbar';
 import TrackerHeader from './components/TrackerHeader';
 import TrackerFooter from './components/TrackerFooter';
-import { TrackShipmentsWrapper } from './TrackShipments.style';
+import { ShipmentCard, ShipmentDetails, TrackShipmentsWrapper } from './TrackShipments.style';
 
 const TrackShipments = () => {
 	let [searchParams, setSearchParams] = useSearchParams();
@@ -16,20 +16,24 @@ const TrackShipments = () => {
 	const { isPending, error, data } = useQuery({
 		queryKey: [`shipment-details-${searchParams?.get('shipment-number')}-`, searchParams?.get('shipment-number')],
 		queryFn: async () => {
-			return await axiosInstance.get(`shipments/track/${searchParams?.get('shipment-number')}`);
+			return await axiosInstance.get(`shipments/track/${searchParams?.get('shipment-number')}`)
 		},
+		retry:false
 	});
 	return (
 		<TrackShipmentsWrapper>
 			<Navbar />
-			<TrackerHeader setSearchParams={setSearchParams} inputValue={searchParams?.get('shipment-number')}/>
+			<TrackerHeader setSearchParams={setSearchParams} inputValue={searchParams?.get('shipment-number')} />
 
 			{isPending && 'Loading...'}
 			{error && 'An error has occurred: ' + error.message}
-			{data && (
-				<>
-				</>
-			)}
+			{data && <ShipmentDetails>
+				<ShipmentCard>
+					
+				</ShipmentCard>
+				<pre>{JSON.stringify(data,null,4)}</pre>
+
+			</ShipmentDetails>}
 			<TrackerFooter />
 		</TrackShipmentsWrapper>
 	);
