@@ -3,31 +3,25 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 interface LoaderState {
-	data: {
-		show: boolean;
-		animation: ReactNode;
-	};
+	show: boolean;
 }
 
 const initialState: LoaderState = {
-	data: {
-		show: false,
-		animation: null,
-	},
+	show: false,
 };
 
 export const loaderSlice = createSlice({
 	name: 'loader',
 	initialState,
 	reducers: {
-		showLoader: (state, action: any) => {
-			state.data = action.payload;
+		showLoader: (state) => {
+			state.show = true;
 		},
 		closeLoader: () => initialState,
 	},
 });
 
-export const getLoader = (state: RootState) => state.loader.data;
+export const getLoader = (state: RootState) => state.loader.show;
 
 export const { showLoader, closeLoader } = loaderSlice.actions;
 

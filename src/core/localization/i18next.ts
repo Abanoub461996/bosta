@@ -3,10 +3,14 @@ import i18next from 'i18next';
 
 // Languages files
 import translationEn from './en.json';
+import translationAr from './ar.json';
 
 const resources = {
 	en: {
 		translation: translationEn,
+	},
+	ar: {
+		translation: translationAr,
 	},
 };
 // eslint-disable-next-line import/no-named-as-default-member
@@ -18,6 +22,7 @@ i18next.use(initReactI18next).init({
 	interpolation: {
 		escapeValue: false,
 	},
+	
 });
 
 export default i18next;

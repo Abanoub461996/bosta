@@ -1,12 +1,10 @@
-import { Outlet, createBrowserRouter } from 'react-router-dom';
-import { authRoutes, userRoutes } from './userRoute';
-import ProtectedRoute from '../../components/ProtectedRoute/ProtectedRoute';
+import { createBrowserRouter } from 'react-router-dom';
+import RootLayout from '../../layouts/RootLayout';
+import TrackShipments from '../../pages/TrackShipments/TrackShipments';
 
 const router = createBrowserRouter([
-	...authRoutes,
-	
-	// Authenticated User Routes
-	{ path: '/', element: <ProtectedRoute ><Outlet /></ProtectedRoute>, children: [...userRoutes] }
+	{ index: true, element: <RootLayout/> },
+	{ path: '/tracking-shipments', element: <TrackShipments/> },
 ]);
 
 export default router;

@@ -5,8 +5,10 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './core/store/store';
 // React Query
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
+import {
+	QueryClient,
+	QueryClientProvider,
+  } from '@tanstack/react-query';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -14,14 +16,16 @@ import './assets/fonts/fonts.css';
 import './index.css';
 
 
-const queryClient = new QueryClient()
+import './core/localization/i18next';
+
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<QueryClientProvider client={queryClient}>
-			<Provider store={store}>
+		<Provider store={store}>
+			<QueryClientProvider client={queryClient}>
 				<App />
-			</Provider>
-		</QueryClientProvider>
+			</QueryClientProvider>
+		</Provider>
 	</React.StrictMode>,
 );
