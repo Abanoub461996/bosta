@@ -1,6 +1,6 @@
 import { initReactI18next } from 'react-i18next';
 import i18next from 'i18next';
-
+import i18n from 'i18next';
 // Languages files
 import translationEn from './en.json';
 import translationAr from './ar.json';
@@ -22,7 +22,6 @@ i18next.use(initReactI18next).init({
 	interpolation: {
 		escapeValue: false,
 	},
-	
 });
 
 export default i18next;

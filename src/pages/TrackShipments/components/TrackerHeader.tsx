@@ -8,17 +8,17 @@ interface HeaderProps {
     inputValue:string|null
 }
 const TrackerHeader = ({inputValue , setSearchParams}:HeaderProps) => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const [value, setValue] = useState<string>(inputValue?inputValue:'');
     function searchShipment(event) {
         event.preventDefault();
         setSearchParams({'shipment-number':value});
       }
 	return (
-		<HeaderWrapper className="flex flex-col justify-center items-center">
+		<HeaderWrapper className="flex flex-col justify-center items-center" dir={i18n.dir()}>
 			<h1 className="header__title">{t('header')}</h1>
 			<form className="tracker_input flex" onSubmit={searchShipment}>
-				<InputText className="tracker__input__field" value={value} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)} />
+				<InputText className="tracker__input__field" placeholder={t('track_order')} value={value} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)} />
 				<div  className="tracker_input__icon">
 					<button type="submit">
 						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

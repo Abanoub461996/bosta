@@ -9,12 +9,13 @@ export const ShipmentDetails = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-	margin-top: 2em;
 	justify-content: center;
 	align-items: flex-start;
 	margin: 0 auto;
 	width: 95%;
 	max-width: 856px;
+	margin-top: 5em;
+	min-height: 60vh;
 `;
 
 export const ShipmentCardWrapper = styled.div`
@@ -42,8 +43,11 @@ export const ShipmentCardWrapper = styled.div`
 		font-size: 40px;
 		line-height: 56px;
 		letter-spacing: 0;
-		font-weight: 700;
+		font-weight: 600;
 		margin-bottom: 1em;
+		@media  (max-width: 768px){
+			font-size: 2rem;
+		}
 	}
 	.shipment__state__des{
 		font-weight: 500;

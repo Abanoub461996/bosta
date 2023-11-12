@@ -1,5 +1,41 @@
 {
-	"home":"احا",
-	"header":"تتبع شحنتك"
+	"home": "Home",
+	"en":"الانجليزية",
+	"ar":"العربية",
+	"header": "تتبع شحنتك",
+	"track_order":"رقم التتبع",
+
+	"ACTIVITY LOG": "تفاصيل التتبع",
+	"Shipment No.": "رقم الشحنة . {{key}}",
+	"status_title": {
+		"DELIVERED_TO_SENDER": "returned",
+		"CANCELLED": "Deleted",
+		"DELIVERED": "delivered"
+	},
+	"status_des": {
+		"CANCELLED": "Your order has been deleted as per your shipper's request. Please contact them for more info",
+		"DELIVERED_TO_SENDER": "Order is returned back to the shipper",
+		"DELIVERED": "Order has beed delivered",
+		"TICKET_CREATED": "Your order is created, Bosta will pick it up once your shipper is ready",
+		"PACKAGE_RECEIVED": {
+			"bosta": "Order is received at Bosta warehouses and being processed.",
+			"Haram Hub": "Order is received at Bosta warehouses and being processed.",
+			"FM & Reverse Hub": "Order is canceled and it will be returned back to the shipper",
+			"Tanta Hub": "Order is received at Bosta warehouses and being processed.",
+			"Cairo Sorting Facility": "Order is received at Bosta warehouses and being processed.",
+			"default": "Order is received at Bosta warehouses and being processed."
+		},
+		"IN_TRANSIT": "Order is being transferred to Bosta's Hubs.",
+		"OUT_FOR_DELIVERY": "Order is out for delivery",
+		"WAITING_FOR_CUSTOMER_ACTION": {
+			"تأجيل - العميل طلب التاجيل ليوم اخر":"Order is rescheduled since you postponed delivery to another date",
+			"Postponed - the customer requested postponement for another day.": "Order is rescheduled since you postponed delivery to another date",
+			"Customer is not answering.": "Order is rescheduled as you were not reachable on the phone",
+			"Retry delivery - the customer is not in the address.": "Order is rescheduled since Bosta courier was unable to find you in the address at the delivery time",
+			"default": "Order is rescheduled since you postponed delivery to another date"
+		},
+		"NOT_YET_SHIPPED": "Order is being prepared for return to the shipper"
+	},
+	"Invalid tracking number!":"لا يمكن العثور على أي سجل لرقم التتبع هذا في الوقت الحالي ، يرجى التحقق من الرقم والمحاولة مرة أخرى لاحقًا. لمزيد من المساعدة ، يرجى التواصل بخدمة العملاء."
 
 }

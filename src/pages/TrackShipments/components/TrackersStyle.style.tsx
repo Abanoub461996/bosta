@@ -11,16 +11,23 @@ export const HeaderWrapper = styled.div`
 		line-height: 56px;
 		letter-spacing: 0;
 		margin-bottom: 24px;
+		font-weight: 500;
+		padding-top: 2em;
+		@media (max-width: 768px) {
+			font-size: 2rem;
+		}
 	}
 	.tracker_input {
-		width: 100%;
+		margin: 0 auto;
+		margin-bottom: -2em;
+		width: 95%;
 		box-shadow:
 			0 2px 4px rgba(29, 41, 57, 0.05),
 			0 4px 16px rgba(29, 41, 57, 0.1);
 		border-radius: 10px;
 		max-width: 500px;
 		.tracker__input__field {
-			border-radius: 10px 0 0 10px;
+			border-radius: ${(props) => (props.dir == 'ltr' ? '10px 0px 0px 10px;' : '0 10px 10px 0')};
 			border: 1px solid #e4e7ec;
 			padding: 20px;
 			width: 100%;
@@ -31,8 +38,8 @@ export const HeaderWrapper = styled.div`
 		.tracker_input__icon {
 			cursor: pointer;
 
-			width: 25%;
-			border-radius: 0 10px 10px 0;
+			width: 15%;
+			border-radius: ${(props) => (props.dir == 'ltr' ? '0 10px 10px 0' : '10px 0px 0px 10px;')};
 			padding: 0;
 			border: 0;
 			background-color: #e30613;
@@ -53,9 +60,10 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
-	background-image: url('./public/footer.png');
+	background-image: url('./footer.png');
 	background-size: contain;
 	background-repeat: repeat-x;
+	background-position: bottom left;
 	height: 180px;
 	opacity: 0.5;
 	background-color: #f3fafb;
@@ -64,13 +72,15 @@ export const FooterWrapper = styled.div`
 export const AcivityLoggerWrapper = styled.div`
 	margin: 0 0 4em 22px;
 	color: #111619;
-	.log__title{
+	.log__title {
 		font-size: 20px;
 		line-height: 28px;
 		letter-spacing: 0;
 		font-weight: 700;
 		color: #667085;
-		margin-left: -22px;
+		/* margin-left: -22px; */
+		margin-left: ${(props) => (props.dir === 'ltr' ? '-22px' : '0')};
+		margin-right: ${(props) => (props.dir === 'rtl' ? '-22px' : '0')};
 	}
 
 	.vertical-timeline::before {
@@ -87,10 +97,12 @@ export const AcivityLoggerWrapper = styled.div`
 			background: #d0d5dd;
 			position: absolute;
 			top: 21px;
-			left: -24px;
+			/* left: -24px; */
+			left: ${(props) => (props.dir === 'ltr' ? '-24px' : '0')};
+			right: ${(props) => (props.dir === 'rtl' ? '-24px' : '0')};
 		}
 		&:last-child:after {
-			height: 70%;
+			height:  calc(100% - 2em);
 		}
 		.activity__log__header {
 			font-size: 1rem;
@@ -138,8 +150,10 @@ export const AcivityLoggerWrapper = styled.div`
 			}
 		}
 		.vertical-timeline-element-icon {
-			left: 0;
-			margin-left: -30px;
+			left: ${(props) => (props.dir === 'ltr' ? '0' : '')};
+			right: ${(props) => (props.dir === 'rtl' ? '0' : '')};
+			margin-left: ${(props) => (props.dir === 'ltr' ? '-30px' : '0')};
+			margin-right: ${(props) => (props.dir === 'rtl' ? '-30px' : '0')};
 		}
 	}
 `;

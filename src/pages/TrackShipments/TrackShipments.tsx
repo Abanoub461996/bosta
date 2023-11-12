@@ -1,9 +1,15 @@
-import { useSearchParams } from 'react-router-dom';
+// MODULES
+// COMPONENTS
 import Navbar from '../../components/Navbar';
 import TrackerHeader from './components/TrackerHeader';
 import TrackerFooter from './components/TrackerFooter';
-import { TrackShipmentsWrapper } from './TrackShipments.style';
 import ShipmentTracker from './components/ShipmentTracker';
+
+// HOOKS
+import { useSearchParams } from 'react-router-dom';
+
+// STYLES
+import { TrackShipmentsWrapper } from './TrackShipments.style';
 
 const TrackShipments = () => {
 	let [searchParams, setSearchParams] = useSearchParams();
@@ -12,7 +18,7 @@ const TrackShipments = () => {
 		<TrackShipmentsWrapper>
 			<Navbar />
 			<TrackerHeader setSearchParams={setSearchParams} inputValue={searchParams?.get('shipment-number')} />
-			{searchParams?.get('shipment-number') && <ShipmentTracker shipmentNumber={searchParams?.get('shipment-number')} />}
+			{searchParams?.get('shipment-number') ? <ShipmentTracker shipmentNumber={searchParams?.get('shipment-number')}/> : <div className='min-h-[50vh]'></div> }
 			
 			<TrackerFooter />
 		</TrackShipmentsWrapper>
