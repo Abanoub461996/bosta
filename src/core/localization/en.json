@@ -1,4 +1,29 @@
 {
 	"home":"Home",
-	"header":"Track your shipment"
+	"header":"Track your shipment",
+	"ACTIVITY LOG":"ACTIVITY LOG",
+	"Shipment No.":"Shipment No. {{key}}",
+	"status_title":{
+		"DELIVERED_TO_SENDER":"returned"
+
+	},
+	"status_des":{
+		"DELIVERED_TO_SENDER":"Order is returned back to the shipper",
+		"TICKET_CREATED":"Your order is created, Bosta will pick it up once your shipper is ready",
+		"PACKAGE_RECEIVED":{
+			"bosta":"Order is received at Bosta warehouses and being processed.",
+			"Haram Hub":"Order is received at Bosta warehouses and being processed.",
+			"FM & Reverse Hub":"Order is canceled and it will be returned back to the shipper",
+			"default":"Order is received at Bosta warehouses and being processed."
+		},
+		"IN_TRANSIT":"Order is being transferred to Bosta's Hubs.",
+		"OUT_FOR_DELIVERY":"Order is out for delivery",
+		"WAITING_FOR_CUSTOMER_ACTION":{
+			"Postponed - the customer requested postponement for another day.":"Order is rescheduled since you postponed delivery to another date",
+			"Customer is not answering.":"Order is rescheduled as you were not reachable on the phone",
+			"Retry delivery - the customer is not in the address.":"Order is rescheduled since Bosta courier was unable to find you in the address at the delivery time",
+			"default":"Order is rescheduled since you postponed delivery to another date"
+		},
+		"NOT_YET_SHIPPED":"Order is being prepared for return to the shipper"
+	}
 }
