@@ -17,4 +17,7 @@
 }
 
 body {
+	overflow-x: hidden;
+	font-family: 'Cairo', sans-serif !important;
+	color:	#111619;
 }

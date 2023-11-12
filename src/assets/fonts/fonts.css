@@ -1,61 +1,50 @@
+
 @font-face {
-    font-family: 'LibreBaskerville';
-    font-style: 700;
-    font-weight: normal;
-    src: local('LibreBaskerville'), url('./libre/LibreBaskerville-Bold.ttf') format('truetype');
+    font-family: 'Cairo';
+    font-weight: 200;
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-ExtraLight.ttf');
+
 }
 
 @font-face {
-    font-family: 'LibreBaskerville';
-    font-style: 400;
-    font-weight: normal;
-    src: local('LibreBaskerville'), url('./libre/LibreBaskerville-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'LibreBaskerville';
-    font-style: italic;
-    font-weight: normal;
-    src: local('LibreBaskerville'), url('./libre/LibreBaskerville-Italic.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
     font-weight: 300;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-Light.ttf');
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-Light.ttf');
 
 }
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
     font-weight: 400;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-Regular.ttf');
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-Regular.ttf');
 
 }
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
     font-weight: 500;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-Medium.ttf');
-
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-Medium.ttf');
 }
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
     font-weight: 600;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-SemiBold.ttf');
-
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-SemiBold.ttf');
 }
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
     font-weight: 700;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-Bold.ttf');
-
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Cairo';
+    font-weight: 800;
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Cairo';
     font-weight: 900;
-    src: local('Manrope'), url('/src/assets/fonts/Manrope/static/Manrope-ExtraBold.ttf');
+    src: local('Cairo'), url('/src/assets/fonts/Cairo/static/Cairo-Black.ttf');
 }

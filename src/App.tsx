@@ -1,13 +1,14 @@
-import { useState } from 'react';
+// MODULES
 import router from './core/Routes/Routes';
 import { RouterProvider } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+// STYLES
 
 import './App.css';
 
-
 function App() {
-	const [count, setCount] = useState(0);
-
+	const { t, i18n } = useTranslation();
+	document.body.dir = i18n.dir();
 	return (
 		<>
 			<RouterProvider router={router} />
